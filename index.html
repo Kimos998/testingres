@@ -57,7 +57,7 @@ code{padding:5px;vertical-align:3px;white-space:nowrap}a{color:#fff;text-decorat
     
         <figure>
        
-        <a class="fancybox fancybox.iframe"  href="'https://kimos998.github.io/testingres/'+'{{description}}'+'.html'"><img class="videoThumb" src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
+        <a class="fancybox fancybox.iframe"  onclick="openDynamicLink()"><img class="videoThumb" src="http://i1.ytimg.com/vi/zH3ZohGnjcg/mqdefault.jpg"></a>
         </figure>
         <h2 class="videoTitle">{{title}}</h2>
        <p class="videoTdescription">{{description}}</p>
@@ -136,7 +136,15 @@ code{padding:5px;vertical-align:3px;white-space:nowrap}a{color:#fff;text-decorat
   
   
   
-  
+  <script>
+  function openDynamicLink() {
+    // قم بجلب قيمة المتغير html من أي مصدر بيانات ترغب في استخدامه
+    var htmlValue = "{{html}}";
+    // قم بتجميع الرابط مع القيمة المحددة لـ html
+    var link = "https://kimos998.github.io/testingres/" + htmlValue + "/index.html";
+    // قم بفتح الرابط في نافذة جديدة
+    window.open(link);
+  }
 
 
   
