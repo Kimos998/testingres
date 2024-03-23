@@ -1,0 +1,25 @@
+<script src="https://sheetdb.io/handlebars.js"></script>
+
+<div style="text-align: center;" id="video1" data-sheetdb-url="https://sheetdb.io/api/v1/zqrv0iabz2lzv"
+    data-sheetdb-search="id=12" onclick="openVideo(this)">
+  <h2>{{title}}</h2>
+  <video width="320" height="240" controls>
+    <source src={{url}} type="video/mp4">
+  </video>
+</div>
+
+<div style="text-align: center;" id="video2" data-sheetdb-url="https://sheetdb.io/api/v1/zqrv0iabz2lzv"
+    data-sheetdb-search="id=12" onclick="openVideo(this)">
+  <h2>{{title}}</h2>
+  <video width="320" height="240" controls>
+    <source src={{url}} type="video/mp4">
+  </video>
+</div>
+
+<!-- Add more divs as needed -->
+
+<script>
+  function openVideo(element) {
+    var videoId = element.getAttribute("data-video-id");
+    window.location.href = "view.html?idarticle=" + videoId;
+  }
